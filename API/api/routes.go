@@ -7,8 +7,8 @@ import (
 func (a *Api) RegisterRoutes(e *echo.Echo) {
 
 	//handlers
-	//e.GET("/tasks", a.getTasks)
-
+	e.GET("/tasks", a.getTasks)
 	e.GET("/tasks/:id", a.getTask)
+	e.DELETE("/tasks/:id", a.deleteTask)
 
 }
